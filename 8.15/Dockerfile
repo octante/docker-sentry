@@ -84,7 +84,8 @@ COPY config.yml /etc/sentry/
 
 COPY docker-entrypoint.sh /entrypoint.sh
 
-EXPOSE 9000
+EXPOSE 9000/tcp 9001/udp
+
 VOLUME /var/lib/sentry/files
 
 ENTRYPOINT ["/entrypoint.sh"]
